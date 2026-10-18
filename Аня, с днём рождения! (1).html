@@ -655,7 +655,7 @@ function drawWipe(t){if(!wp)return;const k=(t-wp.t0)/1e3,w=cv.width,h=cv.height,
  const rs=SH[wp.sh],rot=k*.5,e=1-Math.pow(1-Math.min(1,k/.55),3),r=R*(.02+.98*e),f=Math.max(0,Math.min(1,(k-.54)/.3)),a=1-f*f*(3-2*f);
  const blob=rr=>{cx.beginPath();for(let j=0;j<MM;j++){const q=j/MM*6.2832+rot,z=rr*rs[j];cx[j?'lineTo':'moveTo'](X+z*Math.cos(q),Y+z*Math.sin(q))}cx.closePath()};
  if(a<=0)return;
- const g=cx.createRadialGradient(X,Y,0,X,Y,Math.max(1,r*.92));g.addColorStop(0,'#fff7fb');g.addColorStop(.62,'#ffe6f1');g.addColorStop(1,'#e8e0ff');
+ const g=cx.createRadialGradient(X,Y,0,X,Y,Math.max(1,r*.92));g.addColorStop(0,'#fff8fc');g.addColorStop(.62,'#ffdeee');g.addColorStop(1,'#ddd2ff');
  cx.save();cx.globalAlpha=a;cx.fillStyle=g;blob(r);cx.fill();
  const sh=Math.max(0,1-k/.48);
  if(sh>0){const gl=cx.createLinearGradient(X-r,Y-r,X+r,Y+r);gl.addColorStop(0,'#ff9fc4');gl.addColorStop(1,'#b39bff');
